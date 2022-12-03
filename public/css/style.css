@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+:root {
+  --pagebg: yellow;
+  --main: lightblue;
+  --text: brown;
+  --textdestaque: purple;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Patrick Hand', cursive;
+  background-color: aquamarine;
+  color: var(--text);
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.banner {
+  height: 105px;
+  width: 180;
+  align-items: center;
+  justify-content: center;
+  background-color:var(--main);
+  color: var(--textdestaque);
+  display: flex;
+}
+.banner h1 {
+  align-items: center;
+  margin: 0 auto;
+}
+footer div {
+  height: 60px;
+  width: 100%;
+  background-color: var(--main);
+  color: var(--textdestaque);
+  font-size: 16px;
+  font-weight: lighter;
+  margin: 0 auto;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+footer div p {
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+}

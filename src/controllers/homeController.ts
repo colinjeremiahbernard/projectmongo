@@ -1,11 +1,27 @@
 import { Request, Response } from 'express';
+import { userInfo } from 'os';
 import { Product } from '../models/product';
+import User from '../models/user';
 type frase = {
   text: string,
   author: string
 };
 
-export const home = (req: Request, res: Response) => {
+export const home = async(req:Request, res:Response)=> {
+  let usuarios = await User.find({'fullName.firstName':"Colin"});
+  console.log('USUARIOS', usuarios)
+  let usuarios1 = await User.find({interests: "Programação"});
+  let usuarios2 = await User.find({age:{$lte:35, $qte:10} });
+//.find({ interest: 'Pizza' })
+  //gt => greater then -> Maior
+  //gto => greater than or equal
+  console.log("USUARIOS",usuarios);
+  
+  if(usuarios.length > 0){
+    let firstName = usuarios[0].firstName;
+    let lastName = usuarios[0].lastName;
+    let age: number = 35;
+  }
   let age: number = 58;
   let showOld: boolean = false;
   let priceFilter: number = 12;
@@ -31,6 +47,7 @@ export const home = (req: Request, res: Response) => {
   let expensiveList = Product.getFromPriceAfter(priceFilter);
 
   res.render('pages/home',{
+    titulo:'Pagina Principal',
     firstName:'Colin',
     lastName: 'Stephenson',
     showOld,
