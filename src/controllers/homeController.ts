@@ -1,7 +1,8 @@
 import { Request, Response } from 'express';
 import { userInfo } from 'os';
 import { Product } from '../models/product';
-import User from '../models/user';
+import User from '../models/User';
+
 type frase = {
   text: string,
   author: string
@@ -9,12 +10,17 @@ type frase = {
 
 export const home = async(req:Request, res:Response)=> {
   let usuarios = await User.find({'fullName.firstName':"Colin"});
+  //let usuarios = await User.find({age:{$lte:30}}).sort({age:1 or -1 for decreasing order});
+  //let usuarios = await User.find({age:{$gte:35, $lte:18}}).sort({"fullName, lastName":1});
+
   console.log('USUARIOS', usuarios)
   let usuarios1 = await User.find({interests: "Programação"});
-  let usuarios2 = await User.find({age:{$lte:35, $qte:10} });
-//.find({ interest: 'Pizza' })
-  //gt => greater then -> Maior
-  //gto => greater than or equal
+ 
+  /*.find({ interest: 'Pizza' })
+     gt => greater than -> Maior
+     gte => greater than or equal
+     lt => lower than
+     lte => lower than or equal */
   console.log("USUARIOS",usuarios);
   
   if(usuarios.length > 0){
