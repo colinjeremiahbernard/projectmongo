@@ -6,8 +6,32 @@
       <link rel = "stylesheet" href = "/css/style.css"/>
    </head>
    <body>
-      <header class="container">
+      <header class="container full">
           <div class="banner">
-             <h1>{{titulo}}</h1>
+             <h1>{{tituloPagina}}</h1>
           </div>
       </header>
+      <div class="container full">
+           <nav> 
+              <li class="{{#menu.home}}active{{/menu.home}}">
+                  <a href="/">
+                      Home
+                  </a>
+              </li>
+              <li class="{{#menu.cad}}active{{/menu.cad}}">
+                  <a href="/cadastro">
+                     Cadastro
+                  </a>
+              </li>
+              <li class="{{#menu.manu}}active{{/menu.manu}}">
+                  <a href="/Manutenção">
+                      Manutenção
+                  </a>
+              </li>
+              <li class="{{#menu.sobre}}active{{/menu.sobre}}">
+                  <a href="/sobre">
+                     Sobre
+                  </a>
+              </li>
+           </nav>
+      </div>

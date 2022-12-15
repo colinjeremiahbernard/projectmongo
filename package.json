@@ -4,8 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start-dev": "nodemon -e ts,json, mustache, src/server.ts"
-  },
+    "test": "echo\"Error: no test specified\"&& exit 1",
+    "start-dev": "nodemon -e ts,json,mustache,src/server.js"
+    },
   "keywords": [],
   "author": "",
   "license": "ISC",

@@ -1,44 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&family=Zen+Dots&display=swap');
 :root {
-  --pagebg: yellow;
-  --main: lightblue;
-  --text: brown;
-  --textdestaque: purple;
+  --bgBanner: lawngreen;
+  --bgMenu: brown;
+  --bgPage: yellow;
+  --alerta: red;
+  --aviso: magenta;
+  --successo: blue;
+  --textoPadrao: gold;
+  --textoFundoEscudo: aquamarine;
+  --bgEntrada: lightblue;
+   --destaque: purple;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family:'Roboto', sans-serif;
 }
 
 body {
   font-family: 'Patrick Hand', cursive;
-  background-color: aquamarine;
-  color: var(--text);
+  background-color: var(--bgPage);
+  color: var(--textoPadrao);
+}
+.full {
+  width: 100% !important;
+ 
 }
 .container {
   width: 1200px;
-  margin: 0 auto;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .banner {
   height: 105px;
   width: 180;
   align-items: center;
   justify-content: center;
-  background-color:var(--main);
-  color: var(--textdestaque);
+  background-color:var(--bgbanner);
+  color: var(--textoFundoEscudo);
   display: flex;
+  box-shadow: 0px 5px 3px var(--textoPadrao);
+  
 }
 .banner h1 {
   align-items: center;
   margin: 0 auto;
+  font-family: 'Zen Dots', cursive;
 }
 footer div {
   height: 60px;
   width: 100%;
-  background-color: var(--main);
-  color: var(--textdestaque);
+  background-color: var(--bgBanner);
+  color: var(--destaque);
   font-size: 16px;
   font-weight: lighter;
   margin: 0 auto;
@@ -52,4 +70,30 @@ footer div p {
   margin: 0 auto;
   width: 100%;
   display: flex;
+}
+nav {
+  width: 100%;
+  background-color: var(--bgMenu);
+  box-shadow: 0px 5px 3px var(--textoPadrao);
+  color: var(--textoFundoEscudo);
+  padding: 15px 0;
+  margin-bottom: 15px;
+}
+nav ul {
+  list-style: none;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+nav ul li a {
+  text-decoration: none;
+  padding: 5px 15px;
+  border-radius: 20px;
+  background-color: var(--bgBanner);
+  color: var(textoFundoEscudo);
+}
+nav ul li:hover {
+  background-color: var(--destaque);
+  cursor: default;
 }
