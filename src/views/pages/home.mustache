@@ -6,31 +6,13 @@
     <h2>Lista de Usuarios.</h2>
     
         <hr/>
-        <h2>Produtos</h2>
+        <h2>Users</h2>
         <ul>
-            {{#products}}
-               {{>partials/productItem}}
-            {{/products}}
+            {{#users}}
+               {{>partials/userItem}}
+            {{/users}}
         </ul>
-        <hr/>   
-<h1> Produtos a partir de R$ {{priceFilter}} </h1>
-<ul>
-   {{#expensives}}
-      {{>partials/productItem}} 
-   {{/expensives}}
-   {{/^expensives}}
-      <h2> Nao foram encontrados produtos com este valor</h2>
-      {{/expensives}}
-</ul>
-<hr/>
-<ul>
-   {{#fraseDoDia}}
-       <li><h3> {{>partials/fraseItem}} </h3></li>
-   {{/fraseDoDia}}
-   {{^fraseDoDia}}
-      <h3> Nao ha frases motivacionais hoje.</h3>
-   {{/fraseDoDia}}
+ 
 
-</ul>
 </main>
 {{>partials/footer}}
