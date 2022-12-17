@@ -12,3 +12,29 @@ export const cadastro = async(req:Request, res:Response)=> {
     
   });
 }
+export const addUserAction = async (req:Request, res:Response) => {
+  let emptyFields = false;
+  let newUser = new User();
+  if (
+    req.body.firstName &&
+    req.body.lastName &&
+    req.body.email &&
+    req.body.age &&
+    req.body.interest
+  ) {
+    try{
+      console.log("Usuario sendo adicionado!!");
+      let interests = req.body.interests.split(',');
+      newUser.fullName.firstName = req.body.firstName;
+      if(req.body.middleName) {
+        newUser.fullName.middleName = req.body.middleName;
+      }
+      newUser.fullName.lastName = req.body.lastName;
+      newUser.age = parseInt(req.body.age);
+      newUser.email = req.body.email;
+      newUser.interests = interests;
+    } catch (error) {
+      console.log("Usuario nao adicionado!!");
+    }
+  }
+}

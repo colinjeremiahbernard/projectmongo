@@ -1,6 +1,6 @@
 import { connect } from 'mongoose';
 import dotenv from 'dotenv';
-import { error } from 'console';
+
 
 dotenv.config();
 
@@ -13,6 +13,6 @@ export const mongoConnect = async() => {
      });
      console.log("MongoDB connected successfully.");
   } catch (err) { 
-      console.log("Erro Conexao MongoDB: ", error);
+      console.log("Erro Conexao MongoDB: ", err);
   }
 }

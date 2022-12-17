@@ -37,5 +37,5 @@ const modelName: string = 'User';
 export default (connection && connection.models[modelName])?
   connection.models[modelName]
   :
-  model<UserType>(modelName);
+  model<UserType>(modelName, schema);
   
