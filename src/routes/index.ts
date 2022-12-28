@@ -7,7 +7,7 @@ import * as SobreController from '../controllers/sobreController'
 const router = Router();
 router.get('/', HomeController.home);
 router.get('/cadastro', CadastroController.cadastro);
-router.post('/novo-usuario')
+router.post('/novo-usuario', CadastroController.addUserAction);
 router.get('/manutenção', manutençãoController.manutenção);
 router.get('/sobre', SobreController.sobre);
 

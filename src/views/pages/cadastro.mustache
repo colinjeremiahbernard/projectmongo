@@ -9,10 +9,14 @@
                 <input type='text' nome='firstName' placeholder="Digite o seu nome"/> <br/>
                 <input type='text' nome='middleName' placeholder="Digite o seu nome do meio"/> <br/>
                 <input type='text' nome='lastName' placeholder="Digite o seu sobre nome"/> <br/>
-                <input type='email' nome='email' placeholder="Digite o seu nome"/> <br/>
-                <input type='text' nome='firstName' placeholder="Digite o seu nome"/> <br/>
-
+                <input type='email'nome='email' placeholder="Digite o seu email"/> <br/>
+                <input type='text' nome='age' placeholder="Digite a sua idade"/> <br/>
+                <input type='text' nome='interest' placeholder="Digite os seus intereses(separados por virgula)"/><br/>
+                <input type='submit' value='Inserir'/>
              </form>
+             {{#emptyFields}}
+             <h3>Preencha os campos obrigatorios!</h3>
+             {{/emptyFields}}
          </fieldset>
       </div>
    </main>
