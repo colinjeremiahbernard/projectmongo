@@ -1,12 +1,27 @@
 {{>partials/header}}
    <main class="container">
+     {{#localizar}}
+     <div class="buscar">
+      <form method="POST" action="/buscar">
+         <input type='text' nome='firstName' placeholder="Digite o seu nome"/> <br/>
+         <input type='text' nome='lastName' placeholder="Digite o seu sobre nome"/> <br/>
+         <input type='submit' value='buscar'/>
+      </form>
+     </div>
+     {{/localizar}}
+     {{#usuario}}
       <div class="cadastro">
          <fieldset> 
              <legend>
-                Adicionar um Novo Usuario.
+                Atualizar ou Excluir um Usuario.
              </legend>
              <form method="POST" action="/novo-usuario">
-                <input type='text' nome='firstName' placeholder="Digite o seu nome"/> <br/>
+                <input type='text' 
+                       nome='firstName' 
+                       placeholder="Digite o seu nome"
+                       value={{ fullName.firstName }}
+                       /> 
+                       <br/>
                 <input type='text' nome='middleName' placeholder="Digite o seu nome do meio"/> <br/>
                 <input type='text' nome='lastName' placeholder="Digite o seu sobre nome"/> <br/>
                 <input type='email'nome='email' placeholder="Digite o seu email"/> <br/>
@@ -20,6 +35,7 @@
              {{/emptyFields}}
          </fieldset>
       </div>
+      {{/usuario}}
    </main>
   
 {{>partials/footer}}

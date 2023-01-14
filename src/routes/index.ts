@@ -9,6 +9,7 @@ router.get('/', HomeController.home);
 router.get('/cadastro', CadastroController.cadastro);
 router.post('/novo-usuario', CadastroController.addUserAction);
 router.get('/manutenção', manutençãoController.manutenção);
+router.post('/buscar', ManutençãoController.buscar);
 router.get('/sobre', SobreController.sobre);
 
 export default router;

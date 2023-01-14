@@ -16,3 +16,4 @@ export const mongoConnect = async() => {
       console.log("Erro Conexao MongoDB: ", err);
   }
 }
+

@@ -139,3 +139,21 @@ nav ul li:hover {
 .card-user p {
   margin-top: 5px;
 }
+.cadastro {
+  width: 800px;
+  margin: 15px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cadastro form {
+  width: 600px;
+  margin: 10px auto;
+  margin-left: 100px;
+}
+.cadastro form input {
+  width: 400px;
+  padding: 5px 2px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+}
